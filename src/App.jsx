@@ -1,7 +1,10 @@
 // import { useState } from 'react'
 import './App.css'
-import User from './User';
 import Userform from './Userform';
+import 'react-toastify/dist/ReactToastify.css';
+import Toster from './Toster';
+// import FetchUserData from './FetchUserData';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -56,7 +59,12 @@ return (
       
       
     } */}
+
      <Userform/>
+    <Toster></Toster>
+    {/* <FetchUserData></FetchUserData> */}
+    <ToastContainer ></ToastContainer>
+  
       
     </>
   )

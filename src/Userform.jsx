@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import {Button, Form, Input,  Select, Modal} from "antd"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Userform =()=> {
     const [form] = Form.useForm()
@@ -7,18 +10,21 @@ const Userform =()=> {
 
 
     const formHandle = (values) =>{
-            console.log(values);     
+            console.log( "User Data", values);     
             setIsModal(true);
             form.resetFields()
             
-    }
-
-    const onModal =()=>{
-        setIsModal(false);
+        }
+        
+        
+        const onModal =()=>{
+            setIsModal(false);
+            toast.success('this is success')
+           
     }
 
   return (
-    <div>
+    <div style={{width:'100%', height:"100vh", display:'flex', justifyContent:'center', alignItems:'center'}}>
         
         <Form form={form} 
         style={{
@@ -58,9 +64,11 @@ const Userform =()=> {
 
         </Form>
 
-        <Modal title="Registraction Successfull" visible={isModal} onOk={onModal} onCancel={()=>setIsModal(false)} >
+        <Modal title="Registraction Successfull" open={isModal} onOk={onModal} onCancel={()=>setIsModal(false)} >
             <p>User Registration is Successfull Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nisi magni odio cum quam ut, rem quisquam at omnis reiciendis?</p>
+            
         </Modal>
+         <ToastContainer />
     </div>
   )
 }
