@@ -3,7 +3,7 @@ import './App.css'
 import Userform from './Userform';
 import 'react-toastify/dist/ReactToastify.css';
 import Toster from './Toster';
-// import FetchUserData from './FetchUserData';
+import FetchUserData from './FetchUserData';
 import { ToastContainer } from 'react-toastify';
 
 
@@ -62,8 +62,10 @@ return (
 
      <Userform/>
     <Toster></Toster>
-    {/* <FetchUserData></FetchUserData> */}
+    <FetchUserData></FetchUserData>
     <ToastContainer ></ToastContainer>
+
+   
   
       
     </>
