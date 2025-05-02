@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Toster from './Toster';
 import FetchUserData from './FetchUserData';
 import { ToastContainer } from 'react-toastify';
+import SearchFilter from './SearchFilter';
 
 
 function App() {
@@ -64,7 +65,7 @@ return (
     <Toster></Toster>
     <FetchUserData></FetchUserData>
     <ToastContainer ></ToastContainer>
-
+    <SearchFilter></SearchFilter>
    
   
       

@@ -15,7 +15,7 @@ const Toster = () => {
 
       const data = await response.json();
       setUsers(data.users); 
-      console.log(data);
+      // console.log(data);
       // toast.success("Data is successfully displayed");
     } catch (error) {
       console.error(error);
